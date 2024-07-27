@@ -27,7 +27,7 @@ const App: React.FC = () => {
           </>
         } />
         {tools.map(tool => (
-          <Route key={tool.id} path={`/tool/${tool.id}`} element={
+          <Route key={tool.slug} path={`/tool/${tool.slug}`} element={
             <>
             <ToolHeader tool={tool} />
             <tool.component />
