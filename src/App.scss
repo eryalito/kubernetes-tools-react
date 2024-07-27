@@ -1,0 +1,85 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+// Define variables
+$background-color: #343a40;
+$text-color: white;
+$card-content-color: #343a40;
+$card-background: #f9f9f9;
+$card-border-color: #dddddd;
+
+.App {
+  text-align: center;
+}
+
+header {
+  background-color: $background-color;
+  padding: 20px;
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    text-align: center;
+
+    span {
+      font-size: 0.75em;
+      margin-right: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-0.25rem);
+      }
+    }
+  }
+}
+
+input {
+  padding: 10px;
+  margin-top: 20px;
+  width: 300px;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  background: $card-background;
+  border: 1px solid $card-border-color;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  @media (min-width: 768px) {
+    width: 250px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 300px;
+  }
+  
+  &:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+  }
+}
+
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-content {
+  font-size: 1em;
+  color: $card-content-color;
+}
