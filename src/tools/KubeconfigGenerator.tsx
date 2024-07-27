@@ -8,6 +8,7 @@ const KubeconfigGenerator: React.FC = () => {
   const [caCertificate, setCaCertificate] = useState('');
   const [skipTlsVerification, setSkipTlsVerification] = useState(false);
   const [token, setToken] = useState('');
+  const uniqueId = new Date().getTime(); // Use a timestamp as a unique identifier
 
   const generateKubeconfig = () => {
     return `
@@ -16,21 +17,20 @@ clusters:
 - cluster:
     ${skipTlsVerification ? 'insecure-skip-tls-verify: true' : `certificate-authority-data: ${caCertificate}`}
     server: ${serverUrl}
-  name: cluster-${id}
+  name: cluster-${uniqueId}
 contexts:
 - context:
-    cluster: cluster-${id}
-    user: user-${id}
-  name: context-${id}
-current-context: context-${id}
+    cluster: cluster-${uniqueId}
+    user: user-${uniqueId}
+  name: context-${uniqueId}
+current-context: context-${uniqueId}
 kind: Config
 preferences: {}
 users:
-- name: user-${id}
+- name: user-${uniqueId}
   user:
     token: ${token}
-    ${skipTlsVerification ? 'insecure-skip-tls-verify: true' : ''}
-    `;
+  `;
   };
 
   const handleCopy = () => {
