@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 
 interface CardProps {
   tool: {
-    id: number;
     name: string;
     description: string;
+    slug: string;
   };
 }
 
@@ -13,7 +13,7 @@ const Card: React.FC<CardProps> = ({ tool }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/tool/${tool.id}`);
+    navigate(`/tool/${tool.slug}`);
   };
 
   return (

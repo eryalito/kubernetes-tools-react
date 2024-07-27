@@ -3,9 +3,9 @@ import Card from './Card';
 
 interface CardListProps {
   tools: Array<{
-    id: number;
     name: string;
     description: string;
+    slug: string;
   }>;
 }
 
@@ -13,7 +13,7 @@ const CardList: React.FC<CardListProps> = ({ tools }) => {
   return (
     <div className="card-list">
       {tools.map(tool => (
-        <Card key={tool.id} tool={tool} />
+        <Card key={tool.slug} tool={tool} />
       ))}
     </div>
   );
