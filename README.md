@@ -7,6 +7,7 @@ Welcome to Kubernetes Tools, a collection of web tools that could be handy when 
 The current tools available are:
 
 - [Kubeconfig Generator](https://kubetools.eryalito.dev/tool/kubeconfig-generator): A tool to create kubeconfigs.
+- [Secret Explorer](https://kubetools.eryalito.dev/tool/secret-explorer): Explore secrets data values.
 
 ## Running the project locally
 
