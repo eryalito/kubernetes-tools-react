@@ -17,6 +17,9 @@ const Header: React.FC<HeaderProps> = ({ searchQuery, setSearchQuery }) => {
           onChange={e => setSearchQuery(e.target.value)}
         />
       </div>
+      <a href="https://github.com/eryalito/kubernetes-tools-react" target="_blank" rel="noopener noreferrer" className="github-link">
+        <span className="fab fa-github fa-2x"></span>
+      </a>
     </header>
   );
 }
