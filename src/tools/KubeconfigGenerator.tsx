@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './KubeconfigGenerator.scss';
+import './CommonStyles.scss';
 
 const KubeconfigGenerator: React.FC = () => {
   const { id } = useParams<{ id: string }>();
