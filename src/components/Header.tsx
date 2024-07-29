@@ -9,9 +9,7 @@ const Header: React.FC<HeaderProps> = ({ searchQuery, setSearchQuery }) => {
   return (
     <header>
       <div>
-        <h1>
-          Kubernetes Tools
-        </h1>
+        <h1>Kubernetes Tools</h1>
         <input
           type="text"
           placeholder="Search tools..."
