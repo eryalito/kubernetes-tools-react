@@ -83,3 +83,11 @@ input {
   font-size: 1em;
   color: $card-content-color;
 }
+
+.github-link {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-decoration: none;
+  color: inherit;
+}
